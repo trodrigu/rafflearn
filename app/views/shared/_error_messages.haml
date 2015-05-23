@@ -1,0 +1,7 @@
+- if @raffle.errors.any?
+  #error_explanation
+    .alert.alert-danger 
+      %p The form contains #{pluralize(@raffle.errors.count, "error")}
+    %ul
+    - @raffle.errors.full_messages.each do |msg|
+      %li= msg

@@ -1,13 +1,13 @@
-%h1 Start a new raffle!
+%h1 Who is going to win? 
 .row
   .col-md-6.col-md-offset-3
     = form_for(@raffle) do |f|
       = render 'shared/error_messages'
 
-      = f.label :player
-      = f.text_area :player, class: "form-control"
+      = f.label :players, class: "start_raffle"
+      = f.text_area :players, class: "form-control"
 
-      = f.label :winners
-      = f.input :winners, class: "form-control"
+      = f.label :winners, class: "start_raffle"
+      = f.number_field :winners, class: "form-control"
 
-      = f.submit "Start Raffle", class: "btn btn-primary"
+      = f.submit "Submit", class: "btn btn-primary start_raffle"
