@@ -5,6 +5,8 @@ class RafflrsController < ApplicationController
     @raffle = Rafflr.new(rafflr_params)
     if @raffle.save
       # do something
+      flash[:success] = "Welcome to Rafflr"
+      redirect_to @raffle 
     end
   end
 
