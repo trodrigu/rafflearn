@@ -17,8 +17,13 @@ class RafflrsController < ApplicationController
 
   def show
     @raffle = Rafflr.find(params[:id])
+    @raffle_players =@raffle.players.split(/\s+/)
+    @raffle_winners = @raffle_players.shuffle.pop(@raffle.winners).join(', ')
   end
-  
+
+  def run_that_trap
+  end
+
   private
     def rafflr_params
       params.require(:rafflr).permit( :players, :winners)
