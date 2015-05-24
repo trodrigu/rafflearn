@@ -15,6 +15,10 @@ class RafflrsController < ApplicationController
     @raffle = Rafflr.new
   end
 
+  def show
+    @raffle = Rafflr.find(params[:id])
+  end
+  
   private
     def rafflr_params
       params.require(:rafflr).permit( :players, :winners)
