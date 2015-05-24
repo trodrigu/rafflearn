@@ -1,4 +1,4 @@
 class Rafflr < ActiveRecord::Base
   validates :players, presence: true
-  validates :winners, presence: true
+  validates :number_of_winners, presence: true
 end

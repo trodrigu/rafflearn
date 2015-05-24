@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150523124308) do
+ActiveRecord::Schema.define(version: 20150524184507) do
 
   create_table "rafflrs", force: :cascade do |t|
     t.string   "players"
-    t.integer  "winners"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "number_of_winners"
   end
 
 end
