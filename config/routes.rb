@@ -1,9 +1,19 @@
 Rails.application.routes.draw do
-  get 'rafflrs/create'
+  resources :rafflrs
+  root 'rafflrs#index'
 
-  get 'rafflrs/new'
+  # get 'rafflrs/create'
+  #
+  # get 'rafflrs/new'
+  #
+  # get 'rafflrs/show'
 
-  get 'rafflrs/show'
+  get 'new_user' => "users#new", :as => "new_user"
+  resources :users
+
+  get 'log_out' => 'sessions#destroy', :as => 'log_out'
+  get 'log_in' => 'sessions#new', :as => 'log_in'
+  resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

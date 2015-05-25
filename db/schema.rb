@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150524235645) do
+ActiveRecord::Schema.define(version: 20150525005216) do
 
   create_table "entrants", force: :cascade do |t|
     t.integer  "draw_id"
@@ -33,5 +33,15 @@ ActiveRecord::Schema.define(version: 20150524235645) do
   end
 
   add_index "rafflrs", ["draw_id"], name: "index_rafflrs_on_draw_id", unique: true
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "users", ["username"], name: "index_users_on_username", unique: true
 
 end

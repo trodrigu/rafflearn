@@ -1,4 +1,7 @@
 class RafflrsController < ApplicationController
+  def index
+  end
+
   def create
   end
 
