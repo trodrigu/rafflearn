@@ -21,7 +21,7 @@ class RafflrsController < ApplicationController
     @raffle_winners = @raffle_players.shuffle.pop(@raffle.number_of_winners)
   end
 
-  def run_that_trap
+  def run_raffle
   end
 
   private
