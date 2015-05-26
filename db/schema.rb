@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20150525005216) do
   create_table "rafflrs", force: :cascade do |t|
     t.integer  "draw_id"
     t.string   "description"
+    t.integer  "num_winners"
     t.datetime "drawn_at"
     t.string   "token"
     t.datetime "created_at",  null: false

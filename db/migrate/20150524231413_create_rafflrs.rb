@@ -3,6 +3,7 @@ class CreateRafflrs < ActiveRecord::Migration
     create_table :rafflrs do |t|
       t.integer :draw_id
       t.string :description
+      t.integer :num_winners
       t.datetime :drawn_at
       t.string :token
 
